@@ -30,16 +30,17 @@
   border-bottom: 0.4px solid var(--color-border);
 }
 /* carrossel */
+
 .p-3 {
   padding: 0rem !important;
   margin-bottom: 2rem;
 }
 
 /* região do main */
-main {
+/* main {
   padding: 1.5rem 3rem;
-}
-.catalog {
+} */
+/* .catalog {
   margin-top: 2rem;
   display: grid;
   padding: 1rem 2rem;
@@ -50,9 +51,9 @@ main {
   border-radius: 0.8rem;
   overflow: hidden;
   background-color: #c0c2c5b2;
-}
+} */
 .item img {
-  width: 100%;
+  width: 50%;
   object-fit: cover;
   display: block;
 }
@@ -75,6 +76,7 @@ main {
   font-size: 0.8rem;
   text-transform: uppercase;
 }
+
 /* região para o footer */
 footer {
   /* display: flex;
@@ -105,6 +107,17 @@ gmp-map {
   margin-top: 2.5rem;
   width: 300px;
   height: 300px;
-  padding-left: 2rem;
+  padding-left: 4rem;
   /* border: 1px solid red; */
+}
+
+/* ------------------media querys------------------- */
+
+@media (min-width: 52rem) {
+  #carouselExampleAutoplaying {
+    /* esse aqui usarei nos mediaquery */
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+  }
 }
