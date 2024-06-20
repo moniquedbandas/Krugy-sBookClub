@@ -45,6 +45,7 @@
   margin: 0 5.5rem;
   gap: 6.25rem;
   font: 300 1rem "Rubik", sans-serif;
+  line-height: 1.875rem;
 }
 
 .bd-example-cssgrid [class*="grid"] > * {
