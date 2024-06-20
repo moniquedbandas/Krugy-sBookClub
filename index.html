@@ -31,13 +31,13 @@
             </nav>
             <ul class="nav justify-content-center">
                 <li class="nav-item">
-                    <a class="nav-link" href="./index.html">Home</a>
+                    <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">About Us</a>
+                    <a class="nav-link" href="#about">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Catalog</a>
+                    <a class="nav-link" href="#catalog">Catalog</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./contact.html">Contact</a>
@@ -49,32 +49,54 @@
         </header>
         <main class="p-3 border-0 border-0">
             <section class="myCarsl">
-                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="./assets/1.jpeg" alt="Rainbow" height="200px" width="100%">
+                            <img src="./assets/banner1.png" class="w-100" alt="Rainbow">
                         </div>
                         <div class="carousel-item">
-                            <img src="./assets/2.jpeg" alt="Rainbow" height="200px" width="100%">
+                            <img src="./assets/banner2.png" class="w-100" alt="Rainbow">
                         </div>
                         <div class="carousel-item">
-                            <img src="./assets/3.jpeg" alt="Rainbow" height="200px" width="100%">
+                            <img src="./assets/banner3.png" class="w-100" alt="Rainbow">
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide"
                         data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide"
                         data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
             </section>
+            <section id="about">
+                <img src="./assets/logo.png" alt="Logo do clube">
+                <article class="sobreNos">
+                    Bem-vindo ao Gypsy's Book Club, um refúgio literário no coração de Porto Alegre, RS, Brasil. Fundado
+                    em
+                    2024, nosso clube de livros nasceu do amor pela leitura e pela partilha de conhecimentos. Nossa
+                    missão é
+                    conectar apaixonados por livros, proporcionando um espaço onde cada página vira uma nova descoberta.
+
+                    No Gypsy's Book Club, acreditamos que cada livro tem o poder de transformar vidas, inspirar mudanças
+                    e
+                    criar laços duradouros. Por isso, nos dedicamos a cultivar uma comunidade inclusiva e diversa de
+                    leitores, onde todos são bem-vindos a explorar nosso extenso catálogo de livros. De clássicos
+                    intemporais a best-sellers contemporâneos, temos algo para cada tipo de leitor.
+
+                    Junte-se a nós para discussões envolventes, eventos literários emocionantes e a oportunidade de
+                    descobrir novas perspectivas através das páginas dos nossos livros. No Gypsy's Book Club, cada livro
+                    é
+                    uma jornada, e cada membro é um companheiro nessa aventura literária.
+                </article>
+            </section>
             <section class="m-0 border-0 bd-example m-0 border-0 bd-example-cssgrid">
-                <div class="grid text-center">
+                <div class="grid text-center" id="catalog">
                     <div class="g-col-6 g-col-md-3">
                         <img src="./assets/capa1.jpeg" alt="Imagem aleatoria">
                         <figcaption class="details">

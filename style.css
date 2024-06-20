@@ -37,6 +37,16 @@
 }
 
 /* região do main */
+
+#about {
+  display: flex;
+  align-items: center;
+  text-align: justify;
+  margin: 0 5.5rem;
+  gap: 6.25rem;
+  font: 300 1rem "Rubik", sans-serif;
+}
+
 .bd-example-cssgrid [class*="grid"] > * {
   background-color: #eccaca11;
   border: 1px solid var(--color-border);
@@ -119,11 +129,15 @@ gmp-map {
 /* ------------------media querys------------------- */
 
 @media (min-width: 52rem) {
-  #carouselExampleAutoplaying {
+  #carouselExampleRide {
     display: flex;
-    width: 60%;
+    width: 30%;
     margin: 0 auto;
+    justify-content: center;
   }
+  /* .carousel-inner {
+    max-width: 35rem;
+  } */
   .myCarsl {
     background-color: var(--color-foots);
   }
