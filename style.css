@@ -39,15 +39,17 @@
 /* região do main */
 
 #about {
-  display: flex;
-  align-items: center;
-  text-align: justify;
+  /* display: flex;
+  flex-direction: column;
   margin: 0 5.5rem;
-  gap: 6.25rem;
-  font: 300 1rem "Rubik", sans-serif;
-  line-height: 1.875rem;
+  gap: 2rem; */
+  margin: 0 30px;
+  text-align: justify;
+  font: 300 rem "Rubik", sans-serif;
 }
-
+#about img {
+  padding-left: 15px;
+}
 .bd-example-cssgrid [class*="grid"] > * {
   background-color: #eccaca11;
   border: 1px solid var(--color-border);
@@ -142,7 +144,15 @@ gmp-map {
   .myCarsl {
     background-color: var(--color-foots);
   }
-
+  #about {
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    margin: 0 5.5rem;
+    gap: 6.25rem;
+    font: 300 1rem "Rubik", sans-serif;
+    line-height: 1.875rem;
+  }
   footer {
     display: flex;
     justify-content: space-around;
