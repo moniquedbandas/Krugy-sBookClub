@@ -1,40 +1,35 @@
-async function init() {
-  await customElements.whenDefined("gmp-map");
+//Get the button
+let mybutton = document.getElementById("btn-back-to-top");
 
-  const map = document.querySelector("gmp-map");
-  const marker = document.querySelector("gmp-advanced-marker");
-  const placePicker = document.querySelector("gmpx-place-picker");
-  const infowindow = new google.maps.InfoWindow();
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
 
-  map.innerMap.setOptions({
-    mapTypeControl: false,
-  });
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener("click", backToTop);
 
-  placePicker.addEventListener("gmpx-placechange", () => {
-    const place = placePicker.value;
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
 
-    if (!place.location) {
-      window.alert("No details available for input: '" + place.name + "'");
-      infowindow.close();
-      marker.position = null;
-      return;
-    }
+let map;
 
-    if (place.viewport) {
-      map.innerMap.fitBounds(place.viewport);
-    } else {
-      map.center = place.location;
-      map.zoom = 17;
-    }
+async function initMap() {
+  const { Map } = await google.maps.importLibrary("maps");
 
-    marker.position = place.location;
-    infowindow.setContent(
-      `<strong>${place.displayName}</strong><br>
-         <span>${place.formattedAddress}</span>
-      `
-    );
-    infowindow.open(map.innerMap, marker);
+  map = new Map(document.getElementById("gmp-map"), {
+    center: { lat: -34.397, lng: 150.644 },
+    zoom: 8,
   });
 }
 
-document.addEventListener("DOMContentLoaded", init);
+initMap();
