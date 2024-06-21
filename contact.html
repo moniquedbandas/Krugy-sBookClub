@@ -96,17 +96,18 @@
                     <li>E-mail: moniquedbandas@gmail.com</li>
                 </ul>
             </section>
-            <gmp-map center="-30.042696363247693, -51.21889290312235" zoom="15" map-id="DEMO_MAP_ID"></gmp-map>
+            <gmp-map center="-30.04275131225586,-51.218990325927734" zoom="14" map-id="DEMO_MAP_ID">
+                <gmp-advanced-marker position="-30.04275131225586,-51.218990325927734"
+                    title="My location"></gmp-advanced-marker>
+            </gmp-map>
         </footer>
     </div>
-    <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjEWgRVTW3RLTxuL6TgJTJK9C-U0sR-kY&callback=initMap&v=beta"
-        defer></script>
-    <div id="voltarInicio">
-        <a href="./contact.html">
-            <i class="fa-solid fa-arrow-up" style="font-size: 25px"></i>
-        </a>
-    </div>
+    <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjEWgRVTW3RLTxuL6TgJTJK9C-U0sR-kY&callback=console.debug&libraries=maps,marker&v=beta"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
